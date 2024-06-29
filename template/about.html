@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+</head>
+<center><body>
+{% if marks_obj%}
+<h3>Educational Details</h3>
+<table border="8px">
+    <thead>
+    <th>Sr.No.</th>
+    <th>SSC</th>
+    <th>Diploma</th>
+    <th>BE</th>
+    </thead>
+    {% for mark in marks_obj%}
+    <tr>
+        <td>{{mark.id}}</td>
+        <td>{{mark.ssc_mark}}</td>
+        <td>{{mark.Dip_mark}}</td>
+        <td>{{mark.Eng_mark}}</td>
+    </tr>
+</table>
+    {% endfor %}
+
+{% else%}
+<h1> Data Not Found </h1>
+{%endif%}
+</body></center>
+</html>
